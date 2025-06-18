@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>다중 파일 업로드</title>
+</head>
+<body>
+<h2>파일 업로드</h2>
+
+<form method="post" enctype="multipart/form-data" th:action="@{/upload}">
+  <input type="file" name="files" multiple>
+  <button type="submit">업로드</button>
+</form>
+
+<div th:if="${messages != null}">
+  <h3>결과</h3>
+  <ul>
+    <li th:each="msg : ${messages}" th:text="${msg}"></li>
+  </ul>
+</div>
+</body>
+</html>
