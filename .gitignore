@@ -24,4 +24,5 @@ hs_err_pid*
 replay_pid*
 
 # 하위에있는 local yaml 제어
+**/application-local.yaml
 **/application-local.yml
