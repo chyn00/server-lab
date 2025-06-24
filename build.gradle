@@ -21,7 +21,7 @@ dependencies {
 
     implementation platform("software.amazon.awssdk:bom:2.31.67")//bom을 활용하여 aws sdk 묶음
     implementation "software.amazon.awssdk:s3"//bom을 통해 2.31.67 호환성 해결
-    implementation "software.amazon.awssdk:s3-presigner"//bom을 통해 2.31.67 호환성 해결
+//    implementation "software.amazon.awssdk:s3-presigner"//bom을 통해 2.31.67 호환성 해결
 
     //타임리프 사용해서 간단한 프론트엔드 테스트
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'

@@ -5,5 +5,6 @@ spring:
     multipart:
       max-file-size: 10MB
       max-request-size: 10MB
+      file-size-threshold: 1MB #멀티파트의 파일 사이즈가 일정을 초과하면, 힙에 저장하지 않고 디스크에 저장됨
   thymeleaf:
     cache: false
