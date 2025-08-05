@@ -19,6 +19,13 @@ repositories {
 
 dependencies {
 
+    // 서킷 브레이커 기본
+    implementation 'io.github.resilience4j:resilience4j-spring-boot3:2.1.0'
+    implementation 'io.github.resilience4j:resilience4j-circuitbreaker:2.2.0'//써킷 브레이커 구현체
+    implementation 'io.github.resilience4j:resilience4j-retry:2.2.0'//retry 구현체
+    implementation 'io.github.resilience4j:resilience4j-timelimiter:2.2.0'//시간 limit
+
+
     implementation platform("software.amazon.awssdk:bom:2.31.67")//bom을 활용하여 aws sdk 묶음
     implementation "software.amazon.awssdk:s3"//bom을 통해 2.31.67 호환성 해결
 //    implementation "software.amazon.awssdk:s3-presigner"//bom을 통해 2.31.67 호환성 해결
