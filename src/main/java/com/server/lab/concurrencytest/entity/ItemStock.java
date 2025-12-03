@@ -37,13 +37,6 @@ public class ItemStock {
         return stock;
     }
 
-    /**
-     * 읽기 전용 용도: 현재 재고가 충분한지 앱 레벨에서 미리 보고 싶을 때 사용
-     */
-    public boolean hasEnoughStock(long quantity) {
-        return this.stock != null && this.stock >= quantity;
-    }
-
     // ※ 실제 감소는 DB에서 원자적으로 처리할 거라 엔티티에서는 굳이 차감 안 함.
     // DB UPDATE ... WHERE stock >= ? 로 -1 방어를 함.
 }
